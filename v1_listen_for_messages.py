@@ -1,8 +1,7 @@
 """
 
-Always customize this docstring. 
-
-Add your name, date, and a description of the program.
+Sarah Windeknecht
+January 31, 2023
 
 Listens for messages on the queue.
 This process runs continously. 
@@ -28,7 +27,9 @@ Terminal Reminders
 
 # you can add multiple imports on one line 
 # but we don't recommend it for readability
-import pika, sys, os
+import pika
+import sys
+import os
 
 
 # define a main function to run the program
@@ -48,6 +49,8 @@ def main():
     print(' [*] Waiting for messages. To exit press CTRL+C')
     # start consuming messages
     channel.start_consuming()
+    # close the connection to the server
+    connection.close()
 
 # Standard Python idiom to indicate main program entry point
 # This allows us to import this module and use its functions
