@@ -49,8 +49,6 @@ def main():
     print(' [*] Waiting for messages. To exit press CTRL+C')
     # start consuming messages
     channel.start_consuming()
-    # close the connection to the server
-    connection.close()
 
 # Standard Python idiom to indicate main program entry point
 # This allows us to import this module and use its functions
